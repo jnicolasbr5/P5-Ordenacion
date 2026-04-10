@@ -24,7 +24,7 @@ void Seleccion(staticSequence<Key>& sec, unsigned size) {
 template <typename Key>
 void Burbuja(staticSequence<Key>& sec, unsigned size) {
   for (unsigned i = 1; i < size; i++) {
-    for (unsigned j = size - 1; j > 0; j--) {
+    for (unsigned j = size - 1; j >= i; j--) {
       if (sec[j] < sec[j - 1]) {
         Key x = sec[j];
         sec[j] = sec[j - 1];
