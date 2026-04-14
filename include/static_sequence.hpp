@@ -52,5 +52,12 @@ class staticSequence: public Sequence<Key> {
 		}
 
 		// P5 
-		unsigned size() const {return arreglo_.size();}
+		void print() const  {
+			for (unsigned i = 0; i < arreglo_.size(); i++) {
+				std::cout << arreglo_[i] << " ";
+			}
+			std::cout << std::endl;
+		}
+
+		unsigned size() const  {return block_size_;}
 };

@@ -1,4 +1,4 @@
-#pragma once 
+#pragma once
 
 template <class Key>
 class Sequence {
@@ -7,6 +7,8 @@ class Sequence {
 		virtual bool insert(const Key& k) = 0;
 
 		// P5
-		virtual Key Sequence<Key>::operator[](const unsigned) const = 0;
-		virtual Key& Sequence<Key>::operator[](const unsigned) = 0;
+		virtual Key operator[](const unsigned) const = 0;
+		virtual Key& operator[](const unsigned) = 0;
+
+		virtual ~Sequence() {}
 };
